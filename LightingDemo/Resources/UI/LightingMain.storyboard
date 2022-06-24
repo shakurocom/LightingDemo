@@ -17,66 +17,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="239" placeholderIntrinsicHeight="570" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Jc9-me-Nou">
-                                <rect key="frame" x="32" y="48.5" width="200" height="570"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="YZJ-I4-MU6"/>
-                                </constraints>
-                            </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNa-Jj-9U3" customClass="BrightnessSliderView" customModule="Lighting" customModuleProvider="target">
-                                <rect key="frame" x="263" y="24.5" width="80" height="606"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aSv-ys-9MI">
+                                <rect key="frame" x="-26.5" y="-129.5" width="428" height="926"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brightness_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Bjy-h7-u9W">
-                                        <rect key="frame" x="28" y="0.0" width="24" height="24"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="239" placeholderIntrinsicHeight="570" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Jc9-me-Nou">
+                                        <rect key="frame" x="32" y="178" width="200" height="570"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="24" id="Aj0-Kz-iVW"/>
-                                            <constraint firstAttribute="width" constant="24" id="EXE-fZ-dnf"/>
+                                            <constraint firstAttribute="width" constant="200" id="YZJ-I4-MU6"/>
                                         </constraints>
-                                    </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LnD-RB-NKy" customClass="SliderContentView" customModule="Lighting" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="48" width="80" height="522"/>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNa-Jj-9U3" customClass="BrightnessSliderView" customModule="Lighting" customModuleProvider="target">
+                                        <rect key="frame" x="316" y="154" width="80" height="606"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brightness_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Bjy-h7-u9W">
+                                                <rect key="frame" x="28" y="0.0" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="Aj0-Kz-iVW"/>
+                                                    <constraint firstAttribute="width" constant="24" id="EXE-fZ-dnf"/>
+                                                </constraints>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LnD-RB-NKy" customClass="SliderContentView" customModule="Lighting" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="48" width="80" height="522"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Jwp-I6-Pfv">
+                                                <rect key="frame" x="34" y="594" width="12" height="12"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="12" id="B50-QO-PVK"/>
+                                                    <constraint firstAttribute="width" constant="12" id="pOs-zy-Smj"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Jwp-I6-Pfv">
-                                        <rect key="frame" x="34" y="594" width="12" height="12"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="12" id="B50-QO-PVK"/>
-                                            <constraint firstAttribute="width" constant="12" id="pOs-zy-Smj"/>
+                                            <constraint firstAttribute="trailing" secondItem="LnD-RB-NKy" secondAttribute="trailing" id="6bg-I1-P87"/>
+                                            <constraint firstItem="LnD-RB-NKy" firstAttribute="top" secondItem="Bjy-h7-u9W" secondAttribute="bottom" constant="24" id="7WR-6p-4x6"/>
+                                            <constraint firstItem="Jwp-I6-Pfv" firstAttribute="centerX" secondItem="hNa-Jj-9U3" secondAttribute="centerX" id="Jed-Fk-KOx"/>
+                                            <constraint firstAttribute="bottom" secondItem="Jwp-I6-Pfv" secondAttribute="bottom" id="PZE-A4-EkD"/>
+                                            <constraint firstItem="Jwp-I6-Pfv" firstAttribute="top" secondItem="LnD-RB-NKy" secondAttribute="bottom" constant="24" id="Sxx-DP-5bo"/>
+                                            <constraint firstAttribute="width" constant="80" id="Zgj-UI-gPo"/>
+                                            <constraint firstItem="LnD-RB-NKy" firstAttribute="leading" secondItem="hNa-Jj-9U3" secondAttribute="leading" id="kv9-lp-Rph"/>
+                                            <constraint firstItem="Bjy-h7-u9W" firstAttribute="top" secondItem="hNa-Jj-9U3" secondAttribute="top" id="nOu-sZ-cn7"/>
+                                            <constraint firstItem="Bjy-h7-u9W" firstAttribute="centerX" secondItem="hNa-Jj-9U3" secondAttribute="centerX" id="wcS-rF-yK1"/>
                                         </constraints>
-                                    </imageView>
+                                        <connections>
+                                            <outlet property="contentView" destination="LnD-RB-NKy" id="71Z-MU-c4g"/>
+                                        </connections>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="LnD-RB-NKy" secondAttribute="trailing" id="6bg-I1-P87"/>
-                                    <constraint firstItem="LnD-RB-NKy" firstAttribute="top" secondItem="Bjy-h7-u9W" secondAttribute="bottom" constant="24" id="7WR-6p-4x6"/>
-                                    <constraint firstItem="Jwp-I6-Pfv" firstAttribute="centerX" secondItem="hNa-Jj-9U3" secondAttribute="centerX" id="Jed-Fk-KOx"/>
-                                    <constraint firstAttribute="bottom" secondItem="Jwp-I6-Pfv" secondAttribute="bottom" id="PZE-A4-EkD"/>
-                                    <constraint firstItem="Jwp-I6-Pfv" firstAttribute="top" secondItem="LnD-RB-NKy" secondAttribute="bottom" constant="24" id="Sxx-DP-5bo"/>
-                                    <constraint firstAttribute="width" constant="80" id="Zgj-UI-gPo"/>
-                                    <constraint firstItem="LnD-RB-NKy" firstAttribute="leading" secondItem="hNa-Jj-9U3" secondAttribute="leading" id="kv9-lp-Rph"/>
-                                    <constraint firstItem="Bjy-h7-u9W" firstAttribute="top" secondItem="hNa-Jj-9U3" secondAttribute="top" id="nOu-sZ-cn7"/>
-                                    <constraint firstItem="Bjy-h7-u9W" firstAttribute="centerX" secondItem="hNa-Jj-9U3" secondAttribute="centerX" id="wcS-rF-yK1"/>
+                                    <constraint firstAttribute="height" constant="926" id="Pbc-ln-Zli"/>
+                                    <constraint firstAttribute="trailing" secondItem="hNa-Jj-9U3" secondAttribute="trailing" constant="32" id="WHV-JU-EB3"/>
+                                    <constraint firstItem="Jc9-me-Nou" firstAttribute="leading" secondItem="aSv-ys-9MI" secondAttribute="leading" constant="32" id="aUj-Lp-nvM"/>
+                                    <constraint firstItem="Jc9-me-Nou" firstAttribute="top" relation="greaterThanOrEqual" secondItem="aSv-ys-9MI" secondAttribute="top" constant="16" id="c2a-10-2oG"/>
+                                    <constraint firstItem="hNa-Jj-9U3" firstAttribute="bottom" secondItem="Jc9-me-Nou" secondAttribute="bottom" constant="12" id="g0W-Ht-Uja"/>
+                                    <constraint firstAttribute="width" constant="428" id="rJ5-VO-b26"/>
+                                    <constraint firstItem="Jc9-me-Nou" firstAttribute="centerY" secondItem="aSv-ys-9MI" secondAttribute="centerY" id="tou-Nn-n0E"/>
+                                    <constraint firstItem="hNa-Jj-9U3" firstAttribute="top" secondItem="Jc9-me-Nou" secondAttribute="top" constant="-24" id="xy0-kA-H59"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Jc9-me-Nou" secondAttribute="bottom" constant="16" id="y6E-qj-LXi"/>
                                 </constraints>
-                                <connections>
-                                    <outlet property="contentView" destination="LnD-RB-NKy" id="71Z-MU-c4g"/>
-                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uIP-m4-vwx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Jc9-me-Nou" firstAttribute="top" relation="greaterThanOrEqual" secondItem="uIP-m4-vwx" secondAttribute="top" constant="16" id="12X-P9-Glf"/>
-                            <constraint firstItem="hNa-Jj-9U3" firstAttribute="top" secondItem="Jc9-me-Nou" secondAttribute="top" constant="-24" id="3cU-Dg-U0o"/>
-                            <constraint firstAttribute="trailing" secondItem="hNa-Jj-9U3" secondAttribute="trailing" constant="32" id="CHC-ZO-iru"/>
-                            <constraint firstItem="Jc9-me-Nou" firstAttribute="centerY" secondItem="RlX-Xb-nHe" secondAttribute="centerY" id="fkv-G0-tIk"/>
-                            <constraint firstItem="hNa-Jj-9U3" firstAttribute="bottom" secondItem="Jc9-me-Nou" secondAttribute="bottom" constant="12" id="gZZ-WI-Sdd"/>
-                            <constraint firstItem="uIP-m4-vwx" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Jc9-me-Nou" secondAttribute="bottom" constant="16" id="sGA-Sk-b3l"/>
-                            <constraint firstItem="Jc9-me-Nou" firstAttribute="leading" secondItem="RlX-Xb-nHe" secondAttribute="leading" constant="32" id="zQr-sa-Q9D"/>
+                            <constraint firstItem="aSv-ys-9MI" firstAttribute="centerX" secondItem="RlX-Xb-nHe" secondAttribute="centerX" id="GHS-Cz-lfZ"/>
+                            <constraint firstItem="aSv-ys-9MI" firstAttribute="centerY" secondItem="RlX-Xb-nHe" secondAttribute="centerY" id="okr-Z1-IzB"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
                         <outlet property="brightnessSlider" destination="hNa-Jj-9U3" id="jL9-Zp-Rdr"/>
+                        <outlet property="containerViewScaled" destination="aSv-ys-9MI" id="CgE-1g-7nw"/>
                         <outlet property="stackView" destination="Jc9-me-Nou" id="EMP-YA-kvx"/>
                     </connections>
                 </viewController>

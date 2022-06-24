@@ -8,9 +8,14 @@
 
 import UIKit
 
-class LightingViewController: UIViewController {
+public class LightingViewController: UIViewController {
 
-    struct Option {}
+    enum Constant {
+        static let screenHeight: CGFloat = 926.0
+        static let screenWidtht: CGFloat = 428.0
+    }
+
+    @IBOutlet private var containerViewScaled: UIView!
 
     @IBOutlet private var stackView: UIStackView!
     @IBOutlet private var brightnessSlider: BrightnessSliderView!
@@ -20,14 +25,15 @@ class LightingViewController: UIViewController {
 
     private var feedbackGenerator: UISelectionFeedbackGenerator?
 
-    override var preferredStatusBarStyle: UIStatusBarStyle {
+    public override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         brightnessSlider.value = 1
         view.backgroundColor = Stylesheet.Color.background
+        containerViewScaled.backgroundColor = Stylesheet.Color.background
         LightingZoneList.generate().forEach { lightingZone in
             let buttonBundle: Bundle
             if let bundleURL = Bundle(for: LightingViewController.self).url(forResource: "Lighting", withExtension: "bundle"),
@@ -85,6 +91,15 @@ class LightingViewController: UIViewController {
                         valueCounter = 0.0
                 }
             }
+        }
+    }
+
+    public override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        let currentViewSize = view.bounds.size
+        if Constant.screenHeight > currentViewSize.height || Constant.screenWidtht > currentViewSize.width {
+            let scale = min(currentViewSize.height / Constant.screenHeight, currentViewSize.width / Constant.screenWidtht)
+            containerViewScaled.transform = CGAffineTransform(scaleX: scale, y: scale)
         }
     }
 

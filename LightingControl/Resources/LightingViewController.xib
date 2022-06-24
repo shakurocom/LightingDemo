@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -12,76 +12,89 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LightingViewController" customModule="Lighting" customModuleProvider="target">
             <connections>
                 <outlet property="brightnessSlider" destination="OLw-2g-yoa" id="wwI-JV-vNa"/>
+                <outlet property="containerViewScaled" destination="ffc-Ci-IcF" id="iHe-6F-yf8"/>
                 <outlet property="stackView" destination="IzQ-Te-ywP" id="9vd-jJ-Aoh"/>
                 <outlet property="view" destination="Op1-Qr-IZj" id="6gg-ky-4ga"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="Op1-Qr-IZj">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="239" placeholderIntrinsicHeight="570" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="IzQ-Te-ywP">
-                    <rect key="frame" x="32" y="163" width="200" height="570"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="200" id="QQ9-2B-uKa"/>
-                    </constraints>
-                </stackView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OLw-2g-yoa" userLabel="Brightness Slider" customClass="BrightnessSliderView" customModule="Lighting" customModuleProvider="target">
-                    <rect key="frame" x="302" y="139" width="80" height="606"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffc-Ci-IcF" userLabel="Container View Scaled">
+                    <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brightness_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Spg-9e-fqb">
-                            <rect key="frame" x="28" y="0.0" width="24" height="24"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="239" placeholderIntrinsicHeight="570" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="IzQ-Te-ywP">
+                            <rect key="frame" x="32" y="178" width="200" height="570"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="24" id="6yO-Ha-8l2"/>
-                                <constraint firstAttribute="height" constant="24" id="ehH-PY-xN1"/>
+                                <constraint firstAttribute="width" constant="200" id="QQ9-2B-uKa"/>
                             </constraints>
-                        </imageView>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8L1-ba-M95" customClass="SliderContentView" customModule="Lighting" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="48" width="80" height="522"/>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OLw-2g-yoa" userLabel="Brightness Slider" customClass="BrightnessSliderView" customModule="Lighting" customModuleProvider="target">
+                            <rect key="frame" x="316" y="154" width="80" height="606"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brightness_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Spg-9e-fqb">
+                                    <rect key="frame" x="28" y="0.0" width="24" height="24"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="24" id="6yO-Ha-8l2"/>
+                                        <constraint firstAttribute="height" constant="24" id="ehH-PY-xN1"/>
+                                    </constraints>
+                                </imageView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8L1-ba-M95" customClass="SliderContentView" customModule="Lighting" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="48" width="80" height="522"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot_icon" translatesAutoresizingMaskIntoConstraints="NO" id="yaq-W2-XX3">
+                                    <rect key="frame" x="34" y="594" width="12" height="12"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="12" id="8xM-gr-9UZ"/>
+                                        <constraint firstAttribute="height" constant="12" id="oFZ-yh-EIz"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </view>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot_icon" translatesAutoresizingMaskIntoConstraints="NO" id="yaq-W2-XX3">
-                            <rect key="frame" x="34" y="594" width="12" height="12"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="12" id="8xM-gr-9UZ"/>
-                                <constraint firstAttribute="height" constant="12" id="oFZ-yh-EIz"/>
+                                <constraint firstItem="yaq-W2-XX3" firstAttribute="centerX" secondItem="OLw-2g-yoa" secondAttribute="centerX" id="30S-BJ-dVR"/>
+                                <constraint firstItem="Spg-9e-fqb" firstAttribute="centerX" secondItem="OLw-2g-yoa" secondAttribute="centerX" id="Bsn-Y9-fHm"/>
+                                <constraint firstItem="8L1-ba-M95" firstAttribute="top" secondItem="Spg-9e-fqb" secondAttribute="bottom" constant="24" id="PvH-l0-Ndd"/>
+                                <constraint firstAttribute="trailing" secondItem="8L1-ba-M95" secondAttribute="trailing" id="RWa-rX-xYb"/>
+                                <constraint firstItem="yaq-W2-XX3" firstAttribute="top" secondItem="8L1-ba-M95" secondAttribute="bottom" constant="24" id="Yh3-SO-Ody"/>
+                                <constraint firstAttribute="width" constant="80" id="Zxr-lg-N6T"/>
+                                <constraint firstAttribute="bottom" secondItem="yaq-W2-XX3" secondAttribute="bottom" id="hoF-l3-Lea"/>
+                                <constraint firstItem="8L1-ba-M95" firstAttribute="leading" secondItem="OLw-2g-yoa" secondAttribute="leading" id="ruO-2L-AQX"/>
+                                <constraint firstItem="Spg-9e-fqb" firstAttribute="top" secondItem="OLw-2g-yoa" secondAttribute="top" id="ze3-tU-rVf"/>
                             </constraints>
-                        </imageView>
+                            <connections>
+                                <outlet property="contentView" destination="8L1-ba-M95" id="wfN-WH-6PO"/>
+                            </connections>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="yaq-W2-XX3" firstAttribute="centerX" secondItem="OLw-2g-yoa" secondAttribute="centerX" id="30S-BJ-dVR"/>
-                        <constraint firstItem="Spg-9e-fqb" firstAttribute="centerX" secondItem="OLw-2g-yoa" secondAttribute="centerX" id="Bsn-Y9-fHm"/>
-                        <constraint firstItem="8L1-ba-M95" firstAttribute="top" secondItem="Spg-9e-fqb" secondAttribute="bottom" constant="24" id="PvH-l0-Ndd"/>
-                        <constraint firstAttribute="trailing" secondItem="8L1-ba-M95" secondAttribute="trailing" id="RWa-rX-xYb"/>
-                        <constraint firstItem="yaq-W2-XX3" firstAttribute="top" secondItem="8L1-ba-M95" secondAttribute="bottom" constant="24" id="Yh3-SO-Ody"/>
-                        <constraint firstAttribute="width" constant="80" id="Zxr-lg-N6T"/>
-                        <constraint firstAttribute="bottom" secondItem="yaq-W2-XX3" secondAttribute="bottom" id="hoF-l3-Lea"/>
-                        <constraint firstItem="8L1-ba-M95" firstAttribute="leading" secondItem="OLw-2g-yoa" secondAttribute="leading" id="ruO-2L-AQX"/>
-                        <constraint firstItem="Spg-9e-fqb" firstAttribute="top" secondItem="OLw-2g-yoa" secondAttribute="top" id="ze3-tU-rVf"/>
+                        <constraint firstItem="IzQ-Te-ywP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ffc-Ci-IcF" secondAttribute="top" constant="16" id="4Cs-Fu-AWu"/>
+                        <constraint firstItem="OLw-2g-yoa" firstAttribute="bottom" secondItem="IzQ-Te-ywP" secondAttribute="bottom" constant="12" id="6P1-tT-8nk"/>
+                        <constraint firstAttribute="trailing" secondItem="OLw-2g-yoa" secondAttribute="trailing" constant="32" id="CC5-cq-srH"/>
+                        <constraint firstAttribute="height" constant="926" id="CSI-9b-Nld"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="IzQ-Te-ywP" secondAttribute="bottom" constant="16" id="Y9u-Rh-Qbf"/>
+                        <constraint firstItem="IzQ-Te-ywP" firstAttribute="leading" secondItem="ffc-Ci-IcF" secondAttribute="leading" constant="32" id="aCj-Ew-CTo"/>
+                        <constraint firstAttribute="width" constant="428" id="cdX-mM-b6z"/>
+                        <constraint firstItem="OLw-2g-yoa" firstAttribute="top" secondItem="IzQ-Te-ywP" secondAttribute="top" constant="-24" id="j3p-e4-Bm5"/>
+                        <constraint firstItem="IzQ-Te-ywP" firstAttribute="centerY" secondItem="ffc-Ci-IcF" secondAttribute="centerY" id="zv7-UA-8aF"/>
                     </constraints>
-                    <connections>
-                        <outlet property="contentView" destination="8L1-ba-M95" id="wfN-WH-6PO"/>
-                    </connections>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="z0Z-tZ-FZe"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="IzQ-Te-ywP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="z0Z-tZ-FZe" secondAttribute="top" constant="16" id="1AH-Wd-g4s"/>
-                <constraint firstAttribute="trailing" secondItem="OLw-2g-yoa" secondAttribute="trailing" constant="32" id="85W-df-wGt"/>
-                <constraint firstItem="OLw-2g-yoa" firstAttribute="top" secondItem="IzQ-Te-ywP" secondAttribute="top" constant="-24" id="9rb-1Q-nha"/>
-                <constraint firstItem="z0Z-tZ-FZe" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="IzQ-Te-ywP" secondAttribute="bottom" constant="16" id="DnS-uS-biz"/>
-                <constraint firstItem="IzQ-Te-ywP" firstAttribute="centerY" secondItem="Op1-Qr-IZj" secondAttribute="centerY" id="IC2-Uk-CJb"/>
-                <constraint firstItem="IzQ-Te-ywP" firstAttribute="leading" secondItem="Op1-Qr-IZj" secondAttribute="leading" constant="32" id="hkX-4G-Len"/>
-                <constraint firstItem="OLw-2g-yoa" firstAttribute="bottom" secondItem="IzQ-Te-ywP" secondAttribute="bottom" constant="12" id="q36-kr-2nn"/>
+                <constraint firstItem="ffc-Ci-IcF" firstAttribute="centerX" secondItem="Op1-Qr-IZj" secondAttribute="centerX" id="Q4f-L0-z5q"/>
+                <constraint firstItem="ffc-Ci-IcF" firstAttribute="centerY" secondItem="Op1-Qr-IZj" secondAttribute="centerY" id="iSG-0H-QWV"/>
             </constraints>
-            <point key="canvasLocation" x="141" y="113"/>
+            <point key="canvasLocation" x="140.18691588785046" y="112.74298056155509"/>
         </view>
     </objects>
     <resources>
-        <image name="brightness_icon" width="24" height="24"/>
+        <image name="brightness_icon" width="23.666666030883789" height="23.666666030883789"/>
         <image name="dot_icon" width="12" height="12"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

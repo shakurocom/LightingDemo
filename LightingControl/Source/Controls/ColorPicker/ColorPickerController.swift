@@ -10,16 +10,15 @@ import UIKit
 
 class ColorPickerController: UIViewController {
 
-    struct Option {
-        let lightingName: String
-        let lightingColor: UIColor
-        let lightingCount: Int
-        let didChangeColorClosure: (UIColor) -> Void
-    }
-
     private enum Constants {
         static let duration: TimeInterval = 0.2
     }
+
+    var lightingName: String = ""
+    var lightingColor: UIColor = .white
+    var lightingCount: Int = 0
+
+    var didChangeColorClosure: ((UIColor) -> Void)?
 
     @IBOutlet private var blurImageView: UIImageView!
     @IBOutlet private var colorPickerView: UIView!
@@ -29,11 +28,6 @@ class ColorPickerController: UIViewController {
     @IBOutlet private var colorWheelView: ColorWheelView!
     @IBOutlet private var stackView: UIStackView!
     @IBOutlet private var bottomConstraint: NSLayoutConstraint!
-
-    private var lightingName: String = ""
-    private var lightingCount: Int = 0
-    private var lightingColor: UIColor = .white
-    private var didChangeColorClosure: ((UIColor) -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +60,14 @@ class ColorPickerController: UIViewController {
          (UIColor(hex: "#BD10E0") ?? .clear),
          (UIColor(hex: "#FF4A9B") ?? .clear)
         ].forEach { color in
-            if let subview = R.nib.colorItemView(owner: nil) {
+            let colorItemBundle: Bundle
+            if let bundleURL = Bundle(for: ColorPickerController.self).url(forResource: "Lighting", withExtension: "bundle"),
+               let bundle = Bundle(url: bundleURL) {
+                colorItemBundle = bundle
+            } else {
+                colorItemBundle = Bundle.main
+            }
+            if let subview = colorItemBundle.loadNibNamed("ColorItemView", owner: nil)?[0] as? ColorItemView {
                 subview.color = color
                 subview.isSelected = lightingColor.isEqual(color)
                 subview.didTapClosure = { [weak self] colorItem in
@@ -106,7 +107,7 @@ private extension ColorPickerController {
             self.blurImageView.alpha = visible ? 1.0 : 0.0
         }, completion: { _ in
             if !visible {
-                self.router?.appRouter.dismissViewController(self, animated: false)
+                self.dismiss(animated: true)
             }
         })
     }
@@ -131,21 +132,5 @@ extension ColorPickerController: ColorWheelViewDelegate {
     func colorHweelView(wheelView: ColorWheelView, didChangeColor color: UIColor) {
         resetAllColorItems()
         setSelected(color: color, updateColorWheel: false)
-    }
-}
-
-// MARK: - BaseViewControllerProtocol
-
-extension ColorPickerController: BaseViewControllerProtocol {
-    static func instantiateViewController(_ coordinator: AppCoordinator, options: Option) -> UIViewController {
-        let viewController = R.unwrap({ R.storyboard.lightingMain.colorPickerController() })
-
-        viewController.router = coordinator
-        viewController.lightingName = options.lightingName
-        viewController.lightingColor = options.lightingColor
-        viewController.lightingCount = options.lightingCount
-        viewController.didChangeColorClosure = options.didChangeColorClosure
-
-        return viewController
     }
 }

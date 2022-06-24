@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q8U-N5-LGQ">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Lighting View Controller-->
         <scene sceneID="9by-cc-hLY">
             <objects>
-                <viewController storyboardIdentifier="LightingViewController" automaticallyAdjustsScrollViewInsets="NO" id="Q8U-N5-LGQ" customClass="LightingViewController" customModule="Shakuro_Apps" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LightingViewController" automaticallyAdjustsScrollViewInsets="NO" id="Q8U-N5-LGQ" customClass="LightingViewController" customModule="Lighting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RlX-Xb-nHe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +23,7 @@
                                     <constraint firstAttribute="width" constant="200" id="YZJ-I4-MU6"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNa-Jj-9U3" customClass="BrightnessSliderView" customModule="Shakuro_Apps" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNa-Jj-9U3" customClass="BrightnessSliderView" customModule="Lighting" customModuleProvider="target">
                                 <rect key="frame" x="263" y="24.5" width="80" height="606"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brightness_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Bjy-h7-u9W">
@@ -31,7 +33,7 @@
                                             <constraint firstAttribute="width" constant="24" id="EXE-fZ-dnf"/>
                                         </constraints>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LnD-RB-NKy" customClass="SliderContentView" customModule="Shakuro_Apps" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LnD-RB-NKy" customClass="SliderContentView" customModule="Lighting" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="48" width="80" height="522"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
@@ -60,7 +62,8 @@
                                 </connections>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="uIP-m4-vwx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Jc9-me-Nou" firstAttribute="top" relation="greaterThanOrEqual" secondItem="uIP-m4-vwx" secondAttribute="top" constant="16" id="12X-P9-Glf"/>
                             <constraint firstItem="hNa-Jj-9U3" firstAttribute="top" secondItem="Jc9-me-Nou" secondAttribute="top" constant="-24" id="3cU-Dg-U0o"/>
@@ -70,7 +73,6 @@
                             <constraint firstItem="uIP-m4-vwx" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Jc9-me-Nou" secondAttribute="bottom" constant="16" id="sGA-Sk-b3l"/>
                             <constraint firstItem="Jc9-me-Nou" firstAttribute="leading" secondItem="RlX-Xb-nHe" secondAttribute="leading" constant="32" id="zQr-sa-Q9D"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="uIP-m4-vwx"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
@@ -85,7 +87,7 @@
         <!--Color Picker Controller-->
         <scene sceneID="XQn-3e-J6z">
             <objects>
-                <viewController storyboardIdentifier="ColorPickerController" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="overFullScreen" id="fkh-Lb-etU" customClass="ColorPickerController" customModule="Shakuro_Apps" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ColorPickerController" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="overFullScreen" id="fkh-Lb-etU" customClass="ColorPickerController" customModule="Lighting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sdj-Zt-r5N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -127,7 +129,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEl-AI-ch7" customClass="ColorWheelView" customModule="Shakuro_Apps" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEl-AI-ch7" customClass="ColorWheelView" customModule="Lighting" customModuleProvider="target">
                                         <rect key="frame" x="67.5" y="124" width="240" height="240"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -142,6 +144,7 @@
                                         </constraints>
                                     </stackView>
                                 </subviews>
+                                <viewLayoutGuide key="safeArea" id="aO4-B8-Glm"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="Mg9-RS-2oK" firstAttribute="centerX" secondItem="EHA-lB-MPl" secondAttribute="centerX" id="2Fs-ml-ypP"/>
@@ -160,9 +163,9 @@
                                     <constraint firstItem="aO4-B8-Glm" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Mg9-RS-2oK" secondAttribute="trailing" constant="16" id="ntR-Fs-gUO"/>
                                     <constraint firstItem="aO4-B8-Glm" firstAttribute="bottom" secondItem="Mg9-RS-2oK" secondAttribute="bottom" constant="30" id="tC8-hp-SHj"/>
                                 </constraints>
-                                <viewLayoutGuide key="safeArea" id="aO4-B8-Glm"/>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="hMl-n1-htt"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="YuW-wv-FvH" secondAttribute="bottom" id="7Bq-H1-Tjj"/>
@@ -173,7 +176,6 @@
                             <constraint firstAttribute="trailing" secondItem="EHA-lB-MPl" secondAttribute="trailing" id="r87-uM-hOj"/>
                             <constraint firstItem="YuW-wv-FvH" firstAttribute="top" secondItem="Sdj-Zt-r5N" secondAttribute="top" id="xvc-SB-01g"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="hMl-n1-htt"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
@@ -196,5 +198,8 @@
         <image name="arrow_icon" width="17" height="17"/>
         <image name="brightness_icon" width="24" height="24"/>
         <image name="dot_icon" width="12" height="12"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

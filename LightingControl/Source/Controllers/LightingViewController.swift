@@ -29,7 +29,14 @@ class LightingViewController: UIViewController {
         brightnessSlider.value = 1
         view.backgroundColor = Stylesheet.Color.background
         LightingZoneList.generate().forEach { lightingZone in
-            if let subview = R.nib.lightingZoneView(owner: nil) {
+            let buttonBundle: Bundle
+            if let bundleURL = Bundle(for: LightingViewController.self).url(forResource: "Lighting", withExtension: "bundle"),
+               let bundle = Bundle(url: bundleURL) {
+                buttonBundle = bundle
+            } else {
+                buttonBundle = Bundle.main
+            }
+            if let subview = buttonBundle.loadNibNamed("LightingZoneView", owner: nil)?[0] as? LightingZoneView {
                 subview.lightingName = lightingZone.name
                 subview.lightingColor = lightingZone.lightingColor
                 subview.lightingCount = lightingZone.lightingCount
@@ -91,16 +98,20 @@ private extension LightingViewController {
         let didChangeColorClosure: (UIColor) -> Void = { [weak self] color in
             self?.stackView.arrangedSubviews.lazy.compactMap({ $0 as? LightingZoneView }).first(where: { $0 == lightingZoneView })?.lightingColor = color
         }
-        _ = self.router?.presentViewController(
-            type: ColorPickerController.self,
-            options: ColorPickerController.Option(
-                lightingName: lightingZoneView.lightingName,
-                lightingColor: lightingZoneView.lightingColor,
-                lightingCount: lightingZoneView.lightingCount,
-                didChangeColorClosure: didChangeColorClosure),
-            from: self,
-            style: .modal(transitionStyle: nil, completion: nil),
-            animated: false)
+        let controllerBundle: Bundle
+        if let bundleURL = Bundle(for: ColorPickerController.self).url(forResource: "Lighting", withExtension: "bundle"),
+           let bundle = Bundle(url: bundleURL) {
+            controllerBundle = bundle
+        } else {
+            controllerBundle = Bundle.main
+        }
+        let viewController = ColorPickerController(nibName: "ColorPickerController", bundle: controllerBundle)
+        viewController.modalPresentationStyle = .overFullScreen
+        viewController.lightingName = lightingZoneView.lightingName
+        viewController.lightingColor = lightingZoneView.lightingColor
+        viewController.lightingCount = lightingZoneView.lightingCount
+        viewController.didChangeColorClosure = didChangeColorClosure
+        present(viewController, animated: true)
     }
 
 }

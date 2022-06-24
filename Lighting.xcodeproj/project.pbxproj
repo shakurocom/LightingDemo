@@ -32,6 +32,10 @@
 		6B308CF428659E4700D16AE3 /* LightingZoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B308CF228659E4700D16AE3 /* LightingZoneView.xib */; };
 		6B308CF528659E4700D16AE3 /* ColorItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B308CF328659E4700D16AE3 /* ColorItemView.xib */; };
 		6B308CF82865A03500D16AE3 /* CGPoint+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B308CF72865A03500D16AE3 /* CGPoint+Helpers.swift */; };
+		6B308CFA2865AC4300D16AE3 /* LightingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B308CF92865AC4300D16AE3 /* LightingViewController.xib */; };
+		6B308CFE2865AD1B00D16AE3 /* ColorPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B308CFD2865AD1B00D16AE3 /* ColorPickerController.xib */; };
+		6B308D012865AFDC00D16AE3 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B308CFF2865AF9900D16AE3 /* Montserrat-Regular.ttf */; };
+		759119D417EC26DF714756F0 /* Pods_Lighting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4223BE2F70DE821E8082E2 /* Pods_Lighting.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +66,12 @@
 		6B308CF228659E4700D16AE3 /* LightingZoneView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LightingZoneView.xib; sourceTree = "<group>"; };
 		6B308CF328659E4700D16AE3 /* ColorItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorItemView.xib; sourceTree = "<group>"; };
 		6B308CF72865A03500D16AE3 /* CGPoint+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Helpers.swift"; sourceTree = "<group>"; };
+		6B308CF92865AC4300D16AE3 /* LightingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LightingViewController.xib; sourceTree = "<group>"; };
+		6B308CFD2865AD1B00D16AE3 /* ColorPickerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorPickerController.xib; sourceTree = "<group>"; };
+		6B308CFF2865AF9900D16AE3 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		F157393DA35C8B7C8513F335 /* Pods-Lighting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lighting.release.xcconfig"; path = "Target Support Files/Pods-Lighting/Pods-Lighting.release.xcconfig"; sourceTree = "<group>"; };
+		F37CDE29EF1DD040B4D7EC30 /* Pods-Lighting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lighting.debug.xcconfig"; path = "Target Support Files/Pods-Lighting/Pods-Lighting.debug.xcconfig"; sourceTree = "<group>"; };
+		FE4223BE2F70DE821E8082E2 /* Pods_Lighting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lighting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,18 +79,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				759119D417EC26DF714756F0 /* Pods_Lighting.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FADBBCC2BBC2CCA74ADC30A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE4223BE2F70DE821E8082E2 /* Pods_Lighting.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6B308CA42865963B00D16AE3 = {
 			isa = PBXGroup;
 			children = (
 				6B308CC4286597A500D16AE3 /* LightingControl */,
 				6B308CAF2865963B00D16AE3 /* LightingDemo */,
 				6B308CAE2865963B00D16AE3 /* Products */,
+				9202F2D4E7084942E36CA526 /* Pods */,
+				3FADBBCC2BBC2CCA74ADC30A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,7 +161,10 @@
 			isa = PBXGroup;
 			children = (
 				6B308CEE28659D8800D16AE3 /* Lighting.xcassets */,
+				6B308CFD2865AD1B00D16AE3 /* ColorPickerController.xib */,
+				6B308CF92865AC4300D16AE3 /* LightingViewController.xib */,
 				6B308CF628659F0200D16AE3 /* Controls */,
+				6B308D002865AF9C00D16AE3 /* Fonts */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -212,6 +236,23 @@
 			path = Controls;
 			sourceTree = "<group>";
 		};
+		6B308D002865AF9C00D16AE3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6B308CFF2865AF9900D16AE3 /* Montserrat-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		9202F2D4E7084942E36CA526 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F37CDE29EF1DD040B4D7EC30 /* Pods-Lighting.debug.xcconfig */,
+				F157393DA35C8B7C8513F335 /* Pods-Lighting.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -219,9 +260,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B308CC12865963D00D16AE3 /* Build configuration list for PBXNativeTarget "Lighting" */;
 			buildPhases = (
+				A2F0E4C2BA96F96294BC9C1D /* [CP] Check Pods Manifest.lock */,
 				6B308CA92865963B00D16AE3 /* Sources */,
 				6B308CAA2865963B00D16AE3 /* Frameworks */,
 				6B308CAB2865963B00D16AE3 /* Resources */,
+				F45ECDC585334AA4C0623692 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -270,16 +313,61 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B308D012865AFDC00D16AE3 /* Montserrat-Regular.ttf in Resources */,
 				6B308CBD2865963D00D16AE3 /* LaunchScreen.storyboard in Resources */,
 				6B308CF528659E4700D16AE3 /* ColorItemView.xib in Resources */,
 				6B308CF128659E1200D16AE3 /* LightingMain.storyboard in Resources */,
+				6B308CFE2865AD1B00D16AE3 /* ColorPickerController.xib in Resources */,
 				6B308CBA2865963D00D16AE3 /* Assets.xcassets in Resources */,
 				6B308CF428659E4700D16AE3 /* LightingZoneView.xib in Resources */,
 				6B308CEF28659D8800D16AE3 /* Lighting.xcassets in Resources */,
+				6B308CFA2865AC4300D16AE3 /* LightingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A2F0E4C2BA96F96294BC9C1D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lighting-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F45ECDC585334AA4C0623692 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lighting/Pods-Lighting-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lighting/Pods-Lighting-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lighting/Pods-Lighting-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6B308CA92865963B00D16AE3 /* Sources */ = {
@@ -438,6 +526,7 @@
 		};
 		6B308CC22865963D00D16AE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F37CDE29EF1DD040B4D7EC30 /* Pods-Lighting.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -445,10 +534,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MW2UF479VW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Lighting/Info.plist;
+				INFOPLIST_FILE = LightingDemo/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = LightingMain;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -468,6 +557,7 @@
 		};
 		6B308CC32865963D00D16AE3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F157393DA35C8B7C8513F335 /* Pods-Lighting.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -475,10 +565,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MW2UF479VW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Lighting/Info.plist;
+				INFOPLIST_FILE = LightingDemo/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = LightingMain;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

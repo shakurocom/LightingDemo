@@ -98,7 +98,7 @@ public class LightingViewController: UIViewController {
         super.viewDidLayoutSubviews()
         let currentViewSize = view.bounds.size
         if Constant.screenHeight > currentViewSize.height || Constant.screenWidtht > currentViewSize.width {
-            let scale = min(currentViewSize.height / Constant.screenHeight, currentViewSize.width / Constant.screenWidtht)
+            let scale = max(currentViewSize.height / Constant.screenHeight, currentViewSize.width / Constant.screenWidtht)
             containerViewScaled.transform = CGAffineTransform(scaleX: scale, y: scale)
         }
     }

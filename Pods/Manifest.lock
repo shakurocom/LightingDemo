@@ -1,0 +1,16 @@
+PODS:
+  - Shakuro.CommonTypes (1.1.1)
+
+DEPENDENCIES:
+  - Shakuro.CommonTypes
+
+SPEC REPOS:
+  trunk:
+    - Shakuro.CommonTypes
+
+SPEC CHECKSUMS:
+  Shakuro.CommonTypes: 8b15b334da1dfba894237940f890f7519d33ba3e
+
+PODFILE CHECKSUM: 694521902ae0de1d15c76307ef1739f56faff89a
+
+COCOAPODS: 1.11.3

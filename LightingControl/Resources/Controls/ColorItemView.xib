@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ColorItemView" customModule="ShakuroApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWd-hR-0qT">
+                    <rect key="frame" x="12" y="12" width="24" height="24"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="8WO-P0-f6e"/>
+                        <constraint firstAttribute="height" constant="24" id="eSx-oI-aIK"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tx5-nd-9HG">
+                    <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                    <connections>
+                        <action selector="didTapOnItem" destination="iN0-l3-epB" eventType="touchUpInside" id="zSr-Li-9X2"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Tx5-nd-9HG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="GlZ-aH-JlP"/>
+                <constraint firstItem="IWd-hR-0qT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="HqC-aF-7WA"/>
+                <constraint firstAttribute="trailing" secondItem="IWd-hR-0qT" secondAttribute="trailing" constant="12" id="I2q-fv-7xe"/>
+                <constraint firstItem="Tx5-nd-9HG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="V3B-UD-oT2"/>
+                <constraint firstItem="IWd-hR-0qT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="dy0-Ye-MIa"/>
+                <constraint firstAttribute="trailing" secondItem="Tx5-nd-9HG" secondAttribute="trailing" id="iOp-ut-USg"/>
+                <constraint firstAttribute="bottom" secondItem="IWd-hR-0qT" secondAttribute="bottom" constant="12" id="jEh-C3-HcM"/>
+                <constraint firstAttribute="bottom" secondItem="Tx5-nd-9HG" secondAttribute="bottom" id="vrN-yU-XL5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="circleView" destination="IWd-hR-0qT" id="nZ6-yu-B34"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="110"/>
+        </view>
+    </objects>
+</document>

@@ -28,7 +28,6 @@
 		6B308CEC28659CDE00D16AE3 /* UIImage+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B308CEA28659CDE00D16AE3 /* UIImage+Bundle.swift */; };
 		6B308CED28659CDE00D16AE3 /* UIColor+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B308CEB28659CDE00D16AE3 /* UIColor+Bundle.swift */; };
 		6B308CEF28659D8800D16AE3 /* Lighting.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B308CEE28659D8800D16AE3 /* Lighting.xcassets */; };
-		6B308CF128659E1200D16AE3 /* LightingMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B308CF028659E1200D16AE3 /* LightingMain.storyboard */; };
 		6B308CF428659E4700D16AE3 /* LightingZoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B308CF228659E4700D16AE3 /* LightingZoneView.xib */; };
 		6B308CF528659E4700D16AE3 /* ColorItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B308CF328659E4700D16AE3 /* ColorItemView.xib */; };
 		6B308CF82865A03500D16AE3 /* CGPoint+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B308CF72865A03500D16AE3 /* CGPoint+Helpers.swift */; };
@@ -63,7 +62,6 @@
 		6B308CEA28659CDE00D16AE3 /* UIImage+Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Bundle.swift"; sourceTree = "<group>"; };
 		6B308CEB28659CDE00D16AE3 /* UIColor+Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Bundle.swift"; sourceTree = "<group>"; };
 		6B308CEE28659D8800D16AE3 /* Lighting.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Lighting.xcassets; sourceTree = "<group>"; };
-		6B308CF028659E1200D16AE3 /* LightingMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LightingMain.storyboard; sourceTree = "<group>"; };
 		6B308CF228659E4700D16AE3 /* LightingZoneView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LightingZoneView.xib; sourceTree = "<group>"; };
 		6B308CF328659E4700D16AE3 /* ColorItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorItemView.xib; sourceTree = "<group>"; };
 		6B308CF72865A03500D16AE3 /* CGPoint+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Helpers.swift"; sourceTree = "<group>"; };
@@ -164,8 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				6B308CEE28659D8800D16AE3 /* Lighting.xcassets */,
-				6B308CFD2865AD1B00D16AE3 /* ColorPickerController.xib */,
-				6B308CF92865AC4300D16AE3 /* LightingViewController.xib */,
+				6BA48422286EF5120030B418 /* Controllers */,
 				6B308CF628659F0200D16AE3 /* Controls */,
 				6B308D002865AF9C00D16AE3 /* Fonts */,
 			);
@@ -205,7 +202,6 @@
 			isa = PBXGroup;
 			children = (
 				6B308CBB2865963D00D16AE3 /* LaunchScreen.storyboard */,
-				6B308CF028659E1200D16AE3 /* LightingMain.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -245,6 +241,15 @@
 				6B308CFF2865AF9900D16AE3 /* Montserrat-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		6BA48422286EF5120030B418 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6B308CFD2865AD1B00D16AE3 /* ColorPickerController.xib */,
+				6B308CF92865AC4300D16AE3 /* LightingViewController.xib */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		9202F2D4E7084942E36CA526 /* Pods */ = {
@@ -319,7 +324,6 @@
 				6B308D012865AFDC00D16AE3 /* Montserrat-Regular.ttf in Resources */,
 				6B308CBD2865963D00D16AE3 /* LaunchScreen.storyboard in Resources */,
 				6B308CF528659E4700D16AE3 /* ColorItemView.xib in Resources */,
-				6B308CF128659E1200D16AE3 /* LightingMain.storyboard in Resources */,
 				6B308CFE2865AD1B00D16AE3 /* ColorPickerController.xib in Resources */,
 				6B308CBA2865963D00D16AE3 /* Assets.xcassets in Resources */,
 				6B308CF428659E4700D16AE3 /* LightingZoneView.xib in Resources */,
@@ -541,7 +545,6 @@
 				INFOPLIST_FILE = LightingDemo/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = LightingMain;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -572,7 +575,6 @@
 				INFOPLIST_FILE = LightingDemo/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = LightingMain;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

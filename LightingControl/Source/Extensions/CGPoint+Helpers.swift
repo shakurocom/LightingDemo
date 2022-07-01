@@ -1,8 +1,5 @@
 //
 //  CGPoint+Helpers.swift
-//  Lighting
-//
-//  Created by Eugene Klyuenkov on 24.06.2022.
 //
 
 import UIKit

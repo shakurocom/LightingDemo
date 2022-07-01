@@ -1,8 +1,6 @@
 //
 //  FontsLoader.swift
 //
-//  Created by Eugene Klyuenkov on 27.06.2022.
-//
 
 import Foundation
 import UIKit
@@ -36,16 +34,8 @@ public class FontsLoader {
         let fonts: [(name: String, fontExtension: String)] = [
             (name: "Montserrat-Regular", fontExtension: "ttf")
         ]
-        let bundle: Bundle
-        let podBundle = Bundle(for: LightingViewController.self)
-        if let actualBundleURL = podBundle.url(forResource: "Lighting", withExtension: "bundle"),
-           let actualBundle = Bundle(url: actualBundleURL) {
-            bundle = actualBundle
-        } else {
-            bundle = Bundle.main
-        }
         for font in fonts {
-            _ = UIFont.registerFont(bundle: bundle, fontName: font.name, fontExtension: font.fontExtension)
+            _ = UIFont.registerFont(bundle: Bundle.findBundleIfNeeded(for: FontsLoader.self), fontName: font.name, fontExtension: font.fontExtension)
         }
     }
 

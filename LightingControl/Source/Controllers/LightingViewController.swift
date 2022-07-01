@@ -35,14 +35,7 @@ public class LightingViewController: UIViewController {
         view.backgroundColor = Stylesheet.Color.background
         containerViewScaled.backgroundColor = Stylesheet.Color.background
         LightingZoneList.generate().forEach { lightingZone in
-            let buttonBundle: Bundle
-            if let bundleURL = Bundle(for: LightingViewController.self).url(forResource: "Lighting", withExtension: "bundle"),
-               let bundle = Bundle(url: bundleURL) {
-                buttonBundle = bundle
-            } else {
-                buttonBundle = Bundle.main
-            }
-            if let subview = buttonBundle.loadNibNamed("LightingZoneView", owner: nil)?[0] as? LightingZoneView {
+            if let subview = Bundle.findBundleIfNeeded(for: LightingZoneView.self).loadNibNamed("LightingZoneView", owner: nil)?[0] as? LightingZoneView {
                 subview.lightingName = lightingZone.name
                 subview.lightingColor = lightingZone.lightingColor
                 subview.lightingCount = lightingZone.lightingCount
@@ -113,14 +106,7 @@ private extension LightingViewController {
         let didChangeColorClosure: (UIColor) -> Void = { [weak self] color in
             self?.stackView.arrangedSubviews.lazy.compactMap({ $0 as? LightingZoneView }).first(where: { $0 == lightingZoneView })?.lightingColor = color
         }
-        let controllerBundle: Bundle
-        if let bundleURL = Bundle(for: ColorPickerController.self).url(forResource: "Lighting", withExtension: "bundle"),
-           let bundle = Bundle(url: bundleURL) {
-            controllerBundle = bundle
-        } else {
-            controllerBundle = Bundle.main
-        }
-        let viewController = ColorPickerController(nibName: "ColorPickerController", bundle: controllerBundle)
+        let viewController = ColorPickerController(nibName: "ColorPickerController", bundle: Bundle.findBundleIfNeeded(for: ColorPickerController.self))
         viewController.modalPresentationStyle = .overFullScreen
         viewController.lightingName = lightingZoneView.lightingName
         viewController.lightingColor = lightingZoneView.lightingColor

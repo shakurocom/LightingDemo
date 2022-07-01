@@ -53,20 +53,13 @@ class ColorPickerController: UIViewController {
         if let window = UIApplication.shared.windows.first {
             blurImageView.image = window.blurredSnapshot(withBlurRadius: 5.44)
         }
-
+        let colorItemBundle = Bundle.findBundleIfNeeded(for: ColorPickerController.self)
         [(UIColor(hex: "#F7F2D6") ?? .clear),
          (UIColor(hex: "#01BCEA") ?? .clear),
          (UIColor(hex: "#FED899") ?? .clear),
          (UIColor(hex: "#BD10E0") ?? .clear),
          (UIColor(hex: "#FF4A9B") ?? .clear)
         ].forEach { color in
-            let colorItemBundle: Bundle
-            if let bundleURL = Bundle(for: ColorPickerController.self).url(forResource: "Lighting", withExtension: "bundle"),
-               let bundle = Bundle(url: bundleURL) {
-                colorItemBundle = bundle
-            } else {
-                colorItemBundle = Bundle.main
-            }
             if let subview = colorItemBundle.loadNibNamed("ColorItemView", owner: nil)?[0] as? ColorItemView {
                 subview.color = color
                 subview.isSelected = lightingColor.isEqual(color)

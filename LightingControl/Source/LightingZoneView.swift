@@ -26,6 +26,7 @@ class LightingZoneView: UIView {
 
     @IBOutlet private var brightnessSlider: LightingZoneSlider!
 
+    /// Сalled when the value of the slider changes.
     var selectionChanged: ((_ zoneView: LightingZoneView) -> Void)?
 
     private(set) var isSelected: Bool = false {

@@ -12,12 +12,14 @@ class ColorItemView: UIView {
 
     @IBOutlet private var circleView: UIView!
 
+    /// Color for circle view. The default value is `UIColor.clear`
     var color: UIColor = .clear {
         didSet {
             circleView.backgroundColor = color
         }
     }
 
+    /// Show cirlce view if selected. The default value is `false`.
     var isSelected: Bool = false {
         didSet {
             if oldValue != isSelected {
@@ -26,6 +28,7 @@ class ColorItemView: UIView {
         }
     }
 
+    /// Called when an item is selected.
     var didTapClosure: ((ColorItemView) -> Void)?
 
     override func awakeFromNib() {
@@ -40,6 +43,7 @@ class ColorItemView: UIView {
         circleView.layer.cornerRadius = 12.0
     }
 
+    /// Resets the selected item.
     func reset() {
         isSelected = false
     }

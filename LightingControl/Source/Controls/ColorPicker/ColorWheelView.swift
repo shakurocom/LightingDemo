@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// The delegate that handles the selected color.
 protocol ColorWheelViewDelegate: AnyObject {
     func colorHweelView(wheelView: ColorWheelView, didChangeColor color: UIColor)
 }
@@ -51,6 +52,9 @@ class ColorWheelView: UIView {
         }
     }
 
+    /// Sets the selected color in the color wheel.
+    /// - parameter color: the color to set in the color wheel.
+    /// - parameter animated: animated color setting. The default value is `false`.
     func setColor(_ color: UIColor, animated: Bool = false) {
         hsvColor = HSVColor.fromUIColor(color)
 

@@ -35,6 +35,7 @@ final class HSVColor {
         self.alpha = alpha
     }
 
+    /// Convert UIColor to RGBA color.
     func toRGBAColor() -> RGBAColor {
         var red: CGFloat = 0.0
         var green: CGFloat = 0.0
@@ -44,10 +45,12 @@ final class HSVColor {
         return RGBAColor(red: red, green: green, blue: blue, alpha: alpha)
     }
 
+    /// Creates a color object using the specified opacity and HSB color space component values.
     func toUIColor() -> UIColor {
         return UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
     }
 
+    /// Creates HSVColor from UIColor.
     class func fromUIColor(_ color: UIColor) -> HSVColor {
         var hue: CGFloat = 0.0
         var saturation: CGFloat = 0.0

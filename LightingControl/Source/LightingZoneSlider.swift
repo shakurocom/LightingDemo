@@ -12,6 +12,7 @@ class LightingZoneSlider: UIView {
 
     private let slider = CustomSliderView()
 
+    /// Slider current value. Float.
     var value: Float {
         get {
             return slider.value
@@ -21,6 +22,7 @@ class LightingZoneSlider: UIView {
         }
     }
 
+    /// Maximum slider value. Float.
     var maxValue: Float = 1 {
         didSet {
             if value > maxValue {
@@ -29,6 +31,7 @@ class LightingZoneSlider: UIView {
         }
     }
 
+    /// Defines the color of the tracker in the minimum side.
     var minimumTrackColor: UIColor? {
         get {
             return slider.minimumTrackColor
@@ -38,6 +41,7 @@ class LightingZoneSlider: UIView {
         }
     }
 
+    /// Defines the color of the tracker in the maximum side.
     var maximumTrackColor: UIColor? {
         get {
             return slider.maximumTrackColor
@@ -73,6 +77,7 @@ class LightingZoneSlider: UIView {
         update(touches: touches, moved: false)
     }
 
+    /// Increment the slider's current value.
     func incrementValueBy(_ newValue: Float) {
         value += newValue
     }

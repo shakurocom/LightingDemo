@@ -18,8 +18,13 @@ class SliderContentView: UIView {
         static let animationShadowKeyPath: String = "shadowPath"
     }
 
+    /// Сalled when the value of the slider changes.
     var valueChanged: ((_ oldValue: CGFloat, _ newValue: CGFloat) -> Void)?
+
+    /// Сalled when the gesture ended.
     var gestureEnded: (() -> Void)?
+
+    /// Called when the gesture starts.
     var gestureBegin: (() -> Void)?
 
     private(set) var value: CGFloat = 0
@@ -100,6 +105,9 @@ class SliderContentView: UIView {
         gestureEnded?()
     }
 
+    /// Sets the slider to the specified value.
+    /// - parameter aValue: the specified value for the slider.
+    /// - parameter animated: boolean. Whether to animate slider value change.
     func setValue(_ aValue: CGFloat, animated: Bool) {
         value = min(max(aValue, 0), 1)
         udateLayerPaths(animated: animated)

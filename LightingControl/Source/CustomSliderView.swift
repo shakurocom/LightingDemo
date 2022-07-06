@@ -13,11 +13,11 @@ public class CustomSliderView: UIView {
         case horizontal
     }
 
-    /// Track view's left radius. Default = 1.0
-    public var leftRadius: CGFloat = 1.0
+    /// Track view's left radius. The default value is `3.5`.
+    public var leftRadius: CGFloat = 3.5
 
-    /// Track view's left radius. Default = 8.0
-    public var rightRadius: CGFloat = 8.0
+    /// Track view's right radius. The default value is `3.5`.
+    public var rightRadius: CGFloat = 3.5
 
     /// Defines the color of the tracker in the minimum side
     public var minimumTrackColor: UIColor? = UIColor.loadColorFromBundle(name: "RedThermostat") {

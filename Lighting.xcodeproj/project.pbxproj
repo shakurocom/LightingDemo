@@ -25,8 +25,6 @@
 		6B308CE62865993400D16AE3 /* LightingZoneSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B308CE12865993400D16AE3 /* LightingZoneSlider.swift */; };
 		6B308CE72865993400D16AE3 /* LightingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B308CE22865993400D16AE3 /* LightingViewController.swift */; };
 		6B308CE928659CC400D16AE3 /* CustomSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B308CE828659CC400D16AE3 /* CustomSliderView.swift */; };
-		6B308CEC28659CDE00D16AE3 /* UIImage+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B308CEA28659CDE00D16AE3 /* UIImage+Bundle.swift */; };
-		6B308CED28659CDE00D16AE3 /* UIColor+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B308CEB28659CDE00D16AE3 /* UIColor+Bundle.swift */; };
 		6B308CEF28659D8800D16AE3 /* Lighting.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B308CEE28659D8800D16AE3 /* Lighting.xcassets */; };
 		6B308CF428659E4700D16AE3 /* LightingZoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B308CF228659E4700D16AE3 /* LightingZoneView.xib */; };
 		6B308CF528659E4700D16AE3 /* ColorItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B308CF328659E4700D16AE3 /* ColorItemView.xib */; };
@@ -34,8 +32,7 @@
 		6B308CFA2865AC4300D16AE3 /* LightingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B308CF92865AC4300D16AE3 /* LightingViewController.xib */; };
 		6B308CFE2865AD1B00D16AE3 /* ColorPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B308CFD2865AD1B00D16AE3 /* ColorPickerController.xib */; };
 		6B308D012865AFDC00D16AE3 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B308CFF2865AF9900D16AE3 /* Montserrat-Regular.ttf */; };
-		6B9133702869A07500A98894 /* FontsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B91336F2869A07500A98894 /* FontsLoader.swift */; };
-		6BA4842A286F05650030B418 /* Bundle+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA48429286F05650030B418 /* Bundle+Helper.swift */; };
+		6BE772FF287C60D8000ED5FB /* LightingBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE772FE287C60D8000ED5FB /* LightingBundleHelper.swift */; };
 		759119D417EC26DF714756F0 /* Pods_Lighting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4223BE2F70DE821E8082E2 /* Pods_Lighting.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,8 +57,6 @@
 		6B308CE12865993400D16AE3 /* LightingZoneSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightingZoneSlider.swift; sourceTree = "<group>"; };
 		6B308CE22865993400D16AE3 /* LightingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightingViewController.swift; sourceTree = "<group>"; };
 		6B308CE828659CC400D16AE3 /* CustomSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSliderView.swift; sourceTree = "<group>"; };
-		6B308CEA28659CDE00D16AE3 /* UIImage+Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Bundle.swift"; sourceTree = "<group>"; };
-		6B308CEB28659CDE00D16AE3 /* UIColor+Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Bundle.swift"; sourceTree = "<group>"; };
 		6B308CEE28659D8800D16AE3 /* Lighting.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Lighting.xcassets; sourceTree = "<group>"; };
 		6B308CF228659E4700D16AE3 /* LightingZoneView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LightingZoneView.xib; sourceTree = "<group>"; };
 		6B308CF328659E4700D16AE3 /* ColorItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorItemView.xib; sourceTree = "<group>"; };
@@ -69,8 +64,7 @@
 		6B308CF92865AC4300D16AE3 /* LightingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LightingViewController.xib; sourceTree = "<group>"; };
 		6B308CFD2865AD1B00D16AE3 /* ColorPickerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorPickerController.xib; sourceTree = "<group>"; };
 		6B308CFF2865AF9900D16AE3 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
-		6B91336F2869A07500A98894 /* FontsLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsLoader.swift; sourceTree = "<group>"; };
-		6BA48429286F05650030B418 /* Bundle+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Helper.swift"; sourceTree = "<group>"; };
+		6BE772FE287C60D8000ED5FB /* LightingBundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightingBundleHelper.swift; sourceTree = "<group>"; };
 		F157393DA35C8B7C8513F335 /* Pods-Lighting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lighting.release.xcconfig"; path = "Target Support Files/Pods-Lighting/Pods-Lighting.release.xcconfig"; sourceTree = "<group>"; };
 		F37CDE29EF1DD040B4D7EC30 /* Pods-Lighting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lighting.debug.xcconfig"; path = "Target Support Files/Pods-Lighting/Pods-Lighting.debug.xcconfig"; sourceTree = "<group>"; };
 		FE4223BE2F70DE821E8082E2 /* Pods_Lighting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lighting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,11 +178,8 @@
 		6B308CCA2865987400D16AE3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				6BA48429286F05650030B418 /* Bundle+Helper.swift */,
 				6B308CF72865A03500D16AE3 /* CGPoint+Helpers.swift */,
-				6B308CEB28659CDE00D16AE3 /* UIColor+Bundle.swift */,
 				6B308CCD286598B900D16AE3 /* UIImage+blur.swift */,
-				6B308CEA28659CDE00D16AE3 /* UIImage+Bundle.swift */,
 				6B308CCC286598B900D16AE3 /* UIView+snapshot.swift */,
 			);
 			path = Extensions;
@@ -252,7 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				6B308CE828659CC400D16AE3 /* CustomSliderView.swift */,
-				6B91336F2869A07500A98894 /* FontsLoader.swift */,
+				6BE772FE287C60D8000ED5FB /* LightingBundleHelper.swift */,
 				6B308CE12865993400D16AE3 /* LightingZoneSlider.swift */,
 				6B308CDF2865993400D16AE3 /* LightingZoneType.swift */,
 				6B308CE02865993400D16AE3 /* LightingZoneView.swift */,
@@ -396,11 +387,9 @@
 				6B308CF82865A03500D16AE3 /* CGPoint+Helpers.swift in Sources */,
 				6B308CE52865993400D16AE3 /* LightingZoneView.swift in Sources */,
 				6B308CCE286598B900D16AE3 /* UIView+snapshot.swift in Sources */,
-				6B308CEC28659CDE00D16AE3 /* UIImage+Bundle.swift in Sources */,
 				6B308CE62865993400D16AE3 /* LightingZoneSlider.swift in Sources */,
 				6B308CDB2865990600D16AE3 /* ColorHelper.swift in Sources */,
 				6B308CCF286598B900D16AE3 /* UIImage+blur.swift in Sources */,
-				6B308CED28659CDE00D16AE3 /* UIColor+Bundle.swift in Sources */,
 				6B308CE42865993400D16AE3 /* LightingZoneType.swift in Sources */,
 				6B308CB12865963B00D16AE3 /* AppDelegate.swift in Sources */,
 				6B308CDA2865990600D16AE3 /* ColorPickerController.swift in Sources */,
@@ -409,10 +398,9 @@
 				6B308CD3286598DE00D16AE3 /* BrightnessSliderView.swift in Sources */,
 				6B308CE72865993400D16AE3 /* LightingViewController.swift in Sources */,
 				6B308CD92865990600D16AE3 /* ColorWheelView.swift in Sources */,
-				6B9133702869A07500A98894 /* FontsLoader.swift in Sources */,
 				6B308CDC2865990600D16AE3 /* ColorItemView.swift in Sources */,
-				6BA4842A286F05650030B418 /* Bundle+Helper.swift in Sources */,
 				6B308CD2286598DE00D16AE3 /* SliderContentView.swift in Sources */,
+				6BE772FF287C60D8000ED5FB /* LightingBundleHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

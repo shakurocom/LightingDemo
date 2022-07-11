@@ -15,6 +15,12 @@ public class LightingViewController: UIViewController {
         static let screenWidtht: CGFloat = 428.0
     }
 
+    static func loadFromNib() -> LightingViewController {
+        LightingBundleHelper.registerFont(name: "Montserrat-Regular", fontExtension: "ttf")
+        let viewController = LightingViewController(nibName: "LightingViewController", bundle: LightingBundleHelper.bundle)
+        return viewController
+    }
+
     @IBOutlet private var containerViewScaled: UIView!
 
     @IBOutlet private var stackView: UIStackView!
@@ -35,7 +41,7 @@ public class LightingViewController: UIViewController {
         view.backgroundColor = Stylesheet.Color.background
         containerViewScaled.backgroundColor = Stylesheet.Color.background
         LightingZoneList.generate().forEach { lightingZone in
-            if let subview = Bundle.findBundleIfNeeded(for: LightingZoneView.self).loadNibNamed("LightingZoneView", owner: nil)?[0] as? LightingZoneView {
+            if let subview = LightingBundleHelper.bundle.loadNibNamed("LightingZoneView", owner: nil)?[0] as? LightingZoneView {
                 subview.lightingName = lightingZone.name
                 subview.lightingColor = lightingZone.lightingColor
                 subview.lightingCount = lightingZone.lightingCount
@@ -106,8 +112,7 @@ private extension LightingViewController {
         let didChangeColorClosure: (UIColor) -> Void = { [weak self] color in
             self?.stackView.arrangedSubviews.lazy.compactMap({ $0 as? LightingZoneView }).first(where: { $0 == lightingZoneView })?.lightingColor = color
         }
-        let viewController = ColorPickerController(nibName: "ColorPickerController", bundle: Bundle.findBundleIfNeeded(for: ColorPickerController.self))
-        viewController.modalPresentationStyle = .overFullScreen
+        let viewController = ColorPickerController.loadFromNib()
         viewController.lightingName = lightingZoneView.lightingName
         viewController.lightingColor = lightingZoneView.lightingColor
         viewController.lightingCount = lightingZoneView.lightingCount

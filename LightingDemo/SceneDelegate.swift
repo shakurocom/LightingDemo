@@ -14,7 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return
         }
         let window = UIWindow(windowScene: windowScene)
-        let viewController = LightingViewController(nibName: "LightingViewController", bundle: nil)
+        let viewController = LightingViewController.loadFromNib()
         window.rootViewController = viewController
         window.makeKeyAndVisible()
         self.window = window

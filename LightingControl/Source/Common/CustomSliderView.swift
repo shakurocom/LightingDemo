@@ -20,14 +20,14 @@ public class CustomSliderView: UIView {
     public var rightRadius: CGFloat = 3.5
 
     /// Defines the color of the tracker in the minimum side
-    public var minimumTrackColor: UIColor? = UIColor.loadColorFromBundle(name: "RedThermostat") {
+    public var minimumTrackColor: UIColor? = LightingBundleHelper.readColor(named: "RedThermostat") {
         didSet {
             updateColors()
         }
     }
 
     /// Defines the color of the tracker in the maximum side
-    public var maximumTrackColor: UIColor? = UIColor.loadColorFromBundle(name: "DarkThermostat") {
+    public var maximumTrackColor: UIColor? = LightingBundleHelper.readColor(named: "DarkThermostat") {
         didSet {
             updateColors()
         }

@@ -147,15 +147,8 @@
 		6B308CC62865984500D16AE3 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				6B308CE828659CC400D16AE3 /* CustomSliderView.swift */,
-				6B91336F2869A07500A98894 /* FontsLoader.swift */,
-				6B308CE12865993400D16AE3 /* LightingZoneSlider.swift */,
-				6B308CDF2865993400D16AE3 /* LightingZoneType.swift */,
-				6B308CE02865993400D16AE3 /* LightingZoneView.swift */,
-				6B308CDE2865993400D16AE3 /* Stylesheet.swift */,
+				6BE772FD287C6090000ED5FB /* Common */,
 				6B308CC82865985C00D16AE3 /* Controllers */,
-				6B308CC92865986B00D16AE3 /* Controls */,
-				6B308CCA2865987400D16AE3 /* Extensions */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -253,6 +246,21 @@
 				6B308CF92865AC4300D16AE3 /* LightingViewController.xib */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6BE772FD287C6090000ED5FB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				6B308CE828659CC400D16AE3 /* CustomSliderView.swift */,
+				6B91336F2869A07500A98894 /* FontsLoader.swift */,
+				6B308CE12865993400D16AE3 /* LightingZoneSlider.swift */,
+				6B308CDF2865993400D16AE3 /* LightingZoneType.swift */,
+				6B308CE02865993400D16AE3 /* LightingZoneView.swift */,
+				6B308CDE2865993400D16AE3 /* Stylesheet.swift */,
+				6B308CC92865986B00D16AE3 /* Controls */,
+				6B308CCA2865987400D16AE3 /* Extensions */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		9202F2D4E7084942E36CA526 /* Pods */ = {

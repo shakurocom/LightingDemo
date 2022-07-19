@@ -16,9 +16,7 @@ public class LightingViewController: UIViewController {
     }
 
     static func loadFromNib() -> LightingViewController {
-        LightingBundleHelper.registerFont(name: "Montserrat-Regular", fontExtension: "ttf")
-        let viewController = LightingViewController(nibName: "LightingViewController", bundle: LightingBundleHelper.bundle)
-        return viewController
+        return LightingBundleHelper.instantiateViewController(targetClass: LightingViewController.self, nibName: "LightingViewController")
     }
 
     @IBOutlet private var containerViewScaled: UIView!

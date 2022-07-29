@@ -16,7 +16,7 @@ public class LightingViewController: UIViewController {
     }
 
     static func loadFromNib() -> LightingViewController {
-        return LightingBundleHelper.instantiateViewController(targetClass: LightingViewController.self, nibName: "LightingViewController")
+        return Bundle.lightingBundleHelper.instantiateViewController(targetClass: LightingViewController.self, nibName: "LightingViewController")
     }
 
     @IBOutlet private var containerViewScaled: UIView!
@@ -39,7 +39,7 @@ public class LightingViewController: UIViewController {
         view.backgroundColor = Stylesheet.Color.background
         containerViewScaled.backgroundColor = Stylesheet.Color.background
         LightingZoneList.generate().forEach { lightingZone in
-            if let subview = LightingBundleHelper.bundle.loadNibNamed("LightingZoneView", owner: nil)?[0] as? LightingZoneView {
+            if let subview = Bundle.lightingBundleHelper.loadNib(name: "LightingZoneView").instantiate(withOwner: nil)[0] as? LightingZoneView {
                 subview.lightingName = lightingZone.name
                 subview.lightingColor = lightingZone.lightingColor
                 subview.lightingCount = lightingZone.lightingCount

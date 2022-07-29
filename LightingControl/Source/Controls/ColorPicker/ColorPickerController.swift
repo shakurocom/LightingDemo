@@ -15,7 +15,7 @@ class ColorPickerController: UIViewController {
     }
 
     static func loadFromNib() -> ColorPickerController {
-        let viewController = ColorPickerController(nibName: "ColorPickerController", bundle: LightingBundleHelper.bundle)
+        let viewController = Bundle.lightingBundleHelper.instantiateViewController(targetClass: ColorPickerController.self, nibName: "ColorPickerController")
         viewController.modalPresentationStyle = .overFullScreen
         return viewController
     }
@@ -65,7 +65,7 @@ class ColorPickerController: UIViewController {
          (UIColor(hex: "#BD10E0") ?? .clear),
          (UIColor(hex: "#FF4A9B") ?? .clear)
         ].forEach { color in
-            if let subview = LightingBundleHelper.bundle.loadNibNamed("ColorItemView", owner: nil)?[0] as? ColorItemView {
+            if let subview = Bundle.lightingBundleHelper.loadNib(name: "ColorItemView").instantiate(withOwner: nil)[0] as? ColorItemView {
                 subview.color = color
                 subview.isSelected = lightingColor.isEqual(color)
                 subview.didTapClosure = { [weak self] colorItem in

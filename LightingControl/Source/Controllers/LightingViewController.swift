@@ -15,7 +15,7 @@ public class LightingViewController: UIViewController {
         static let screenWidtht: CGFloat = 428.0
     }
 
-    static func loadFromNib() -> LightingViewController {
+    public static func loadFromNib() -> LightingViewController {
         return Bundle.lightingBundleHelper.instantiateViewController(targetClass: LightingViewController.self, nibName: "LightingViewController")
     }
 

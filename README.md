@@ -52,7 +52,7 @@ If you prefer not to use CocoaPods, you can integrate Shakuro.Lighting simply by
 
 ## License
 
-Shakuro.MovieList is released under the MIT license. [See LICENSE](https://github.com/shakurocom/ScrollableTabs/blob/master/LICENSE.md) for details.
+Shakuro.Lighting is released under the MIT license. [See LICENSE](https://github.com/shakurocom/ScrollableTabs/blob/master/LICENSE.md) for details.
 
 ## Give it a try and reach us
 

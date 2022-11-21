@@ -12,6 +12,8 @@ Lighting is a Swyft component that allows the user to adjust the intensity of se
 
 Lighting consists of several sliders and buttons that allow the user to pick a room, switch on a light, and adjust its intensity. It is also possible to select the desired color for every available light source. 
 
+![](Resources/lighting-control.gif)
+
 Here is an example of a Lighting animation showing room selection and switching on the lights:
 
 ![](Resources/selectedPlaces.gif)
